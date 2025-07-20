@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda Adrian & Sofía</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div id="load-splash" class="load-splash" >
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="heart-loader-container">
+        <img
+          src="vecteezy_heart-vector-design_27875990.svg"
+          alt="Corazón loader"
+          class="heart-loader-svg"
+          width="90"
+          height="90"
+        />
+      </div>
+    </div>
+
+    <div id="img-full" class="content-container-img" onclick="openContent()">
+      <img src="imgs/tap-para-abrir.jpg" alt="" class="img-full">
+      <div class="invitacion-text">
+        <p>Invitación para: </p>
+        <p id="famailia-name"> </p>
+
+      </div>
+    </div>
+
+    <div id="principal-container" class="principal-container">
+      <img src="imgs/portada.png" alt="" class="portada-img">
+      <div class="portada-text ">
+        <div class="portada-content">
+          <p>08.08.2025</p>
+          <hr style="margin: 0px; margin-top: 10px;" >
+          <div class="portada-names">
+              <p >Adrián</p>
+              <p>&</p>
+              <p>Sofía</p>
+          </div>
+          <hr style="margin: 0px;" >
+            <div class="portada-quote">
+              <span style="font-size: 2em; color: #b99174" >“</span>
+              <p style="margin-bottom: 25px;">Y si alguno prevaleciere contra uno, dos le resistirán; y cordón de tres dobleces no se rompe pronto.”</p>
+              <span style="font-size: 2em;color: #b99174">”</span>
+            </div>
+           <div class="arrow-container">
+            <img src="imgs/flecha-down.svg" alt="">
+           </div>
+        </div>
+      </div>
+      <div class="portada-flores">
+        <img style="width: 100%;" src="imgs/flores.png" alt="">
+      </div>
+    </div>
+
+    <div id="calendar-container" class="container-calendar">
+      <div class="border-container-fecha"></div>
+      <div class="container-fecha">
+        <div class="month-fecha">
+          <p>Agosto</p>
+        </div>
+        <div class=" week-days" >
+          <p>Mar</p>
+          <p>Mie</p>
+          <p>Jue</p>
+          <p>Vie</p>
+          <p>Sab</p>
+          <p>Dom</p>
+          <p>Lun</p>
+        </div>
+        <div class=" days-calendar" >
+          <p style="color: #b991743d;">5</p>
+          <p style="color: #b991747e;">6</p>
+          <p style="color: #b99174b3;">7</p>
+          <p>8</p>
+          <p style="color: #b99174b3;">9</p>
+          <p style="color: #b991747e;">10</p>
+          <p style="color: #b991743d;">11</p>
+        </div>
+      </div>
+      <div class="border-container-fecha"></div>
+    </div>
+
+    <div id="lugar-container" class="lugar-container">
+      <div class=" ceremonia-container">
+        <img class="img-anillos-ceremonia" src="imgs/anillos.png" alt="">
+        <div class="text-ceremonia">
+          <p>Ceremonia</p>
+        </div>
+        <p class="dia-ceremonia">
+          DÍA
+        </p>
+        <p class="dia-y-hora-ceremonia">Viernes 8 de agosto - 2:00pm</p>
+        <p class="dia-ceremonia">
+          LUGAR
+        </p>
+        <p class="dia-y-hora-ceremonia">Iglesia Grupo Cristiano Apostólico</p>
+        <p class="avenida-ceremonia">Av. Eugenio Mendoza</p>
+
+        <button class="como-llegar-cta" onclick="getLocationCeremonia()"><span>¿CÓMO LLEGAR?</span></button>
+      </div>
+      <div class="ceremonia-container">
+        <img class="img-anillos-ceremonia" src="imgs/festejo.png" alt="">
+        <div class="text-ceremonia">
+          <p>Celebración</p>
+        </div>
+        <p class="dia-ceremonia">
+          DÍA
+        </p>
+        <p class="dia-y-hora-ceremonia">Viernes 8 de agosto - 5:00pm</p>
+        <p class="dia-ceremonia">
+          LUGAR
+        </p>
+        <p class="dia-y-hora-ceremonia">Residencias Jardín Los Próceres</p>
+        <p class="avenida-ceremonia">Av. Soublette, San Bernardino.</p>
+
+        <button class="como-llegar-cta" onclick="getLocationFestejo()"><span>¿CÓMO LLEGAR?</span></button>
+
+        <div class="portada-flores">
+          <img style="width: 100%;" src="imgs/flores.png" alt="">
+        </div>
+
+      </div>
+
+      <div class="fotos-container" id="fotos-container">
+        <div class="border-container-fecha"></div>
+        <div class="fotos-content-text">
+            <p class="title-fotos" style="margin-bottom: 0px;">Retratos de </p>
+            <p class="title-fotos" style="margin-top: 0px;">Nuestro Amor</p>
+            <p class="description-fotos">Un minuto, un segundo, un instante que queda en la eternidad</p>
+            <img class="camera-img" src="imgs/camera.png" alt="">
+
+            <div class="fotos-container-img" id="carrusel-fotos">
+              <div class="carrusel-track">
+                
+                <div class="img-foto-individual"><img src="imgs/foto1.png" alt="" class="carrusel-img"></div>
+                <div class="img-foto-individual"><img src="imgs/foto2.png" alt="" class="carrusel-img"></div>
+                <div class="img-foto-individual"><img src="imgs/foto3.png" alt="" class="carrusel-img"></div>
+                <div class="img-foto-individual"><img src="imgs/foto4.png" alt="" class="carrusel-img"></div>
+                <div class="img-foto-individual"><img src="imgs/foto5.png" alt="" class="carrusel-img"></div>
+                <div class="img-foto-individual"><img src="imgs/foto6.png" alt="" class="carrusel-img"></div>
+
+                <!-- Agrega más imágenes si lo deseas -->
+              </div>
+            </div>
+        </div>
+        <div class="border-container-fecha"></div>
+      </div>
+    </div>
+
+    <div id="fiesta-detalles-container" class="fiesta-detalles-container">
+      <div class="fiesta-detalles-content">
+        <div style="color: white; margin-bottom: 40px;">
+            <p class="title-fotos">Fiesta</p>
+            <p class="description-fotos" style="color: white;">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+        </div>
+        <div class="box-detalles-fiesta">
+            <div style="padding: 20px;">
+              <p class="title-fotos">Dress Code</p>
+              <img src="imgs/monio.png" alt="">
+              <p class="description-fotos">Una orientación para tu vestuario.</p>
+            </div>
+            <button class="como-llegar-cta" style="border: 0px; margin-bottom: 20px;" onclick="showModalDress()"><span>VER MÁS</span></button>
+
+        </div>
+
+        <div class="box-detalles-fiesta">
+            <div style="padding: 20px;">
+              <p class="title-fotos">Tips y Notas</p>
+              <img src="imgs/carpeta.png" alt="">
+              <p class="description-fotos">Información adicional para tener en cuenta</p>
+            </div>
+            <button class="como-llegar-cta" style="border: 0px; margin-bottom: 20px;" onclick="showTipsNotas()"><span>+ INFO</span></button>
+
+        </div>
+
+        <div class="portada-flores">
+          <img style="width: 100%;" src="imgs/flores.png" alt="">
+        </div>
+         
+      </div>
+     
+    </div>
+
+    <div class="fotos-container" id="regalos-container">
+        <div class="border-container-fecha"></div>
+        <div class="fotos-content-text">
+            <p class="title-fotos" style="margin-bottom: 0px;">Regalos </p>
+            <p class="description-fotos">Si deseas regalarnos algo más que tu hermosa presencia...</p>
+            <img class="camera-img" src="imgs/regalo.png" alt="">
+
+            <button class="como-llegar-cta" style="border: 0px; margin-bottom: 20px;" onclick="showRegalos()"><span>VER MAS</span></button>
+
+        </div>
+        <div class="border-container-fecha"></div>
+    </div>
+
+    <div id="envianos-tus-fotos" class="fiesta-detalles-container">
+      <div class="fiesta-detalles-content">
+        <div style="color: white; margin-bottom: 40px;">
+            <p class="title-fotos">Compartimos este día junto a ti</p>
+            <p class="description-fotos" style="color: white;">Comparte tus fotos y videos de este hermoso día con nosotros.</p>
+        </div>
+        <div class="portada-flores">
+          <img style="width: 100%;" src="imgs/flores.png" alt="">
+        </div>
+         
+      </div>
+     
+    </div>
+
+    <div class="fotos-container" id="timer-container">
+        <div class="border-container-fecha"></div>
+        <div class="timer-container">
+          <div class="portada-names" style="color: #624938; padding-bottom: 0px;">
+              <p >Adrián & Sofía</p>
+          </div>
+          <div class="timer-content">
+            <div class="timer-box">
+              <p class="contador" id="contador-dias"></p>
+              <p class="contador-label">Dias</p>
+            </div>
+            <div class="timer-box">
+              <p class="contador" id="contador-horas"></p>
+              <p class="contador-label">Hr</p>
+
+            </div>
+            <div class="timer-box">
+              <p class="contador" id="contador-minutos"></p>
+              <p class="contador-label">Min</p>
+
+            </div>
+            <div class="timer-box">
+              <p class="contador" id="contador-segundos"></p>
+              <p class="contador-label">Seg</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="border-container-fecha"></div>
+    </div>
+
+    <div class="footer-container" id="footer-container">
+      <div class="footer-content">
+        <p class="footer-text">Creado con cariño 💛</p>
+      </div>
+
+    </div>
+
+    
+  </div>
+
+  <div id="modal-1" class="modal">
+    <div class="modal-content">
+      <div class="top-modal-img">
+        <img class="img-modal-top" src="imgs/monio.png" alt="">
+      </div>
+
+      <div class="top-modal-close" onclick="document.getElementById('modal-1').style.display='none'">
+        <p style="text-align: center;">X</p>
+      </div>
+
+      <div class="content-modal">
+        <p class="title-fotos">Dress Code</p>
+        <p class="description-fotos">Formal</p>
+        <img class="dress-code" src="imgs/dress-woman.jpg" alt="">
+        <img class="dress-code" src="imgs/dres-code-man.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal">
+    <div class="modal-content">
+      <div class="top-modal-img">
+        <img class="img-modal-top" src="imgs/carpeta.png" alt="">
+      </div>
+
+      <div class="top-modal-close" onclick="document.getElementById('modal-2').style.display='none'">
+        <p style="text-align: center;">X</p>
+      </div>
+
+      <div class="content-modal">
+        <p class="title-fotos">Tips y Notas</p>
+        <p class="description-fotos" style="font-family: 'Lato';">- ¡Por favor ser puntuales!</p>
+        <p class="description-fotos" style="font-family: 'Lato';">- Queremos que disfrutes de esta fiesta al máximo, por eso decidimos que sea un evento solo para adultos.</p>
+        <p class="description-fotos" style="font-family: 'Lato';">- Olvidarse de todo y ¡¡¡a disfrutar!!!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-3" class="modal">
+    <div class="modal-content">
+      <div class="top-modal-img">
+        <img class="img-modal-top" src="imgs/regalo.png" alt="">
+      </div>
+
+      <div class="top-modal-close" onclick="document.getElementById('modal-3').style.display='none'">
+        <p style="text-align: center;">X</p>
+      </div>
+
+      <div class="content-modal">
+        <p class="title-fotos">Regalos</p>
+        <p class="description-fotos" style="font-family: 'Lato';">Para quienes deseen hacer un regalo en efectivo, pueden traerlo en un sobre, También pueden contribuir mediante: </p>
+        <p class="description-fotos" style="font-family: 'Lato'; font-weight: bold;">- Pago móvil</p>
+        <p class="description-fotos" style="font-family: 'Lato'; margin-top: 0px;">Banesco</p>
+        <p class="description-fotos" style="font-family: 'Lato'; margin-top: 0px;">0414XXXXXX</p>
+        <p class="description-fotos" style="font-family: 'Lato'; margin-top: 0px;">21XXXXXX</p>
+        <p class="description-fotos" style="font-family: 'Lato'; font-weight: bold;">- Transferencia</p>
+        <p class="description-fotos" style="font-family: 'Lato'; margin-top: 0px;">Banesco</p>
+        <p class="description-fotos" style="font-family: 'Lato'; margin-top: 0px;">Cuenta: 0134XXXXXX</p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
