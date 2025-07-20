@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function openContent(){
+    // Reproducir música al abrir la invitación (tras interacción del usuario)
+    var audio = document.getElementById("audio-reproductor");
+    if (audio) {
+        audio.play();
+    }
     document.getElementById("img-full").style.display = "none";
     document.getElementById("principal-container").style.display = "flex";
     document.getElementById("calendar-container").style.display = "block";
