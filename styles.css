@@ -573,8 +573,9 @@ body {
 
 .invitacion-text {
   position: absolute;
-  bottom: 20vh;
+  bottom: 10vh;
   color: #fff;
+  right: 10%;
   font-family: 'Lato', serif;
   font-size: 1.2em;
   z-index: 9997

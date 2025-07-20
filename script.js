@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }, duration); 
 
 
+    // Reproducir música al abrir la página
+    var audio = document.getElementById("audio-reproductor");
+    if (audio) {
+        // Intenta reproducir inmediatamente
+        audio.play().catch(function() {
+            // Si el navegador bloquea el autoplay, reproduce al primer click/touch
+            var playAudio = function() {
+                audio.play();
+                document.removeEventListener('click', playAudio);
+                document.removeEventListener('touchstart', playAudio);
+            };
+            document.addEventListener('click', playAudio);
+            document.addEventListener('touchstart', playAudio);
+        });
+    }
 });
 
 
@@ -147,8 +162,8 @@ let familias = {
 const idDeFamilia = new URLSearchParams(window.location.search).get('id');
 
 const familia = familias[idDeFamilia]
-if(!familia){
-    window.location.href = "https://chachocool.com/wp-content/uploads/2018/07/403.jpg";
-}
 
-document.getElementById("famailia-name").textContent = familia;
+if(familia){
+    document.getElementById("invitacion-name").textContent = 'Invitación para: '; 
+    document.getElementById("famailia-name").textContent = familia; 
+}
